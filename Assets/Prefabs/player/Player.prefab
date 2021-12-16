@@ -1034,6 +1034,7 @@ MonoBehaviour:
   zRange: 200
   bala: {fileID: 33546173777187697, guid: 04814e823af9cbd43a3e62a8c1f56816, type: 3}
   verticalInput: 0
+  coins: 0
 --- !u!65 &4011840563486964830
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class Detect_Collision : MonoBehaviour
 {
     private void OnCollisionEnter(Collision otherCollider)
     {
+       //Destruir obstaculo con la bala
         if (gameObject.CompareTag("Obstacle") && otherCollider.gameObject.CompareTag("Proyectile"))
         {
             //Destruir el animal contra el que colisiono
@@ -13,6 +14,7 @@ public class Detect_Collision : MonoBehaviour
             //Destruir proyectil
             Destroy(gameObject);
         }
+       //Mensaje de Game Over , el tiempo se para
         if (gameObject.CompareTag("Obstacle") && otherCollider.gameObject.CompareTag("Player"))
         {
             Time.timeScale = 0;
@@ -20,4 +22,6 @@ public class Detect_Collision : MonoBehaviour
         }
 
     }
+    
+    
 }

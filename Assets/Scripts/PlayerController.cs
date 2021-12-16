@@ -10,10 +10,12 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     private float xRange = 200;
     private float yRange = 200;
+    private float ylowerRange = 0;
     public float zRange = 200;
     public GameObject bala;
     public float verticalInput;
-
+    public int coins;
+    private int maxCoins =10;
 
 
     // Start is called before the first frame update
@@ -36,15 +38,15 @@ public class PlayerController : MonoBehaviour
         }
         if (transform.position.x <= -xRange)
         {
-            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
-        if (transform.position.y > yRange)
+        if (transform.position.y >= yRange)
         {
             transform.position = new Vector3(transform.position.x, yRange, transform.position.z);
         }
-        if (transform.position.y <= -yRange)
+        if (transform.position.y <= ylowerRange)
         {
-            transform.position = new Vector3(transform.position.x, yRange, transform.position.z);
+            transform.position = new Vector3(transform.position.x, ylowerRange, transform.position.z);
         }
         if (transform.position.z >= zRange)
         {
@@ -52,7 +54,7 @@ public class PlayerController : MonoBehaviour
         }
         if (transform.position.z <= -zRange)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -zRange);
         }
        //Disparar las valientes balas
         if (Input.GetKeyDown(KeyCode.RightControl))
@@ -68,5 +70,20 @@ public class PlayerController : MonoBehaviour
        //Rotara verticalmente
         transform.Rotate(Vector3.left * speed * Time.deltaTime * verticalInput);
     }
+    //Agarrar monedas
+    private void OnTriggerEnter(Collider otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("Coin"))
+        {
+            
+            Destroy(otherCollider.gameObject);
+            coins++;
+            Debug.Log($"Vaya fiera tienes {coins}/10 latas de mountain dew");
+            if (coins >= maxCoins)
+            {
+                Debug.Log($"Mision completada, has ganado, sigue volando si quieres");
+            }
+        }
 
+    }
 }

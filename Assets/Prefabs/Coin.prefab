@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1043397403828367231}
   - component: {fileID: 498858634}
   - component: {fileID: 2861098986358914284}
+  - component: {fileID: -1119064587005675377}
+  - component: {fileID: 7083959628129942699}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -26,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043397403828367230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.53, y: 4.61, z: 8.45}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.5856, y: 59.114, z: 2.6094}
+  m_LocalScale: {x: 3.9794555, y: 3.9794555, z: 3.9794555}
   m_Children:
   - {fileID: 1043397404601916106}
   - {fileID: 1043397404732169540}
@@ -61,6 +63,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.5005126, z: 1}
   m_Center: {x: 0, y: 0.60866237, z: 0}
+--- !u!54 &-1119064587005675377
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043397403828367230}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &7083959628129942699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043397403828367230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f0dc75aee06fd4e947fc2c6188816b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1043397403843279021
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +102,6 @@ GameObject:
   - component: {fileID: 1043397403843279017}
   - component: {fileID: 1043397403843279016}
   - component: {fileID: 1043397403843279019}
-  - component: {fileID: 1043397403843279018}
   m_Layer: 0
   m_Name: Cylinder (2)
   m_TagString: Untagged
@@ -143,20 +172,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1043397403843279018
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1043397403843279021}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &1043397404601916110
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +183,6 @@ GameObject:
   - component: {fileID: 1043397404601916106}
   - component: {fileID: 1043397404601916109}
   - component: {fileID: 1043397404601916108}
-  - component: {fileID: 1043397404601916111}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -239,20 +253,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1043397404601916111
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1043397404601916110}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &1043397404732169560
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +264,6 @@ GameObject:
   - component: {fileID: 1043397404732169540}
   - component: {fileID: 1043397404732169543}
   - component: {fileID: 1043397404732169542}
-  - component: {fileID: 1043397404732169561}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -335,17 +334,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1043397404732169561
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1043397404732169560}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
