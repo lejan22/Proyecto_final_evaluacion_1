@@ -14,6 +14,7 @@ public class Spawn_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Aparecen los inocentes perritos
         InvokeRepeating("SpawnPerro", 2, 5f);
 
          
@@ -25,6 +26,7 @@ public class Spawn_Manager : MonoBehaviour
 
     public Vector3 RandomSpawnPos()
     {
+        //Creación en un lugar aleatorio por la gracia de Dios de los perritos en avioneta
         float randomX = Random.Range(-xrange, xrange);
         float randomY = Random.Range(ydownlimit, yrange);
         float randomZ = Random.Range(-zrange, zrange);

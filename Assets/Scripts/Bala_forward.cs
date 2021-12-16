@@ -5,11 +5,8 @@ using UnityEngine;
 public class Bala_forward : MonoBehaviour
 {
     public float speed = 200f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+  
 
     // Update is called once per frame
     void Update()
