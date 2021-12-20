@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
             
             Destroy(otherCollider.gameObject);
             coins++;
+            Time.timeScale = +2;
             Debug.Log($"Vaya fiera tienes {coins}/10 latas de mountain dew");
             if (coins >= maxCoins)
             {
